@@ -1,5 +1,42 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Scenes/Player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
 
 [node name="Spatial" type="Spatial"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="PillarsGroup" type="Spatial" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="PillarsGroup"]
+transform = Transform( 47.2717, 0, 0, 0, 0.137112, 0, 0, 0, 47.2717, 0, 0, 0 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="MeshInstance2" type="MeshInstance" parent="PillarsGroup"]
+transform = Transform( -0.1935, 0, 1.71187, 0, 20.3825, 0, -1.71187, 0, -0.1935, 24.3827, 18.4465, -14.9884 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3" type="MeshInstance" parent="PillarsGroup"]
+transform = Transform( 1.68842, 0, -0.342346, 0, 20.3825, 0, 0.342346, 0, 1.68842, -25.1013, 18.4465, 27.1756 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="MeshInstance4" type="MeshInstance" parent="PillarsGroup"]
+transform = Transform( 0.735099, 0, 1.55807, 0, 20.3825, 0, -1.55807, 0, 0.735099, -10.3291, 18.4465, 3.44225 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="MeshInstance5" type="MeshInstance" parent="PillarsGroup"]
+transform = Transform( 0.955471, 0, 1.43354, 0, 20.3825, 0, -1.43354, 0, 0.955471, 38.0017, 18.4465, 44.6255 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="MeshInstance6" type="MeshInstance" parent="PillarsGroup"]
+transform = Transform( 0.955471, 0, 1.43354, 0, 20.3825, 0, -1.43354, 0, 0.955471, -34.8537, 18.4465, -28.1069 )
+mesh = SubResource( 1 )
+skeleton = NodePath("../..")
+
+[node name="KinematicBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2206, 0 )
